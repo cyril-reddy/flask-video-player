@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <link href="https://vjs.zencdn.net/7.8.3/video-js.css" rel="stylesheet" />
+  <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet">
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <style>
+    body{
+      background-color: #000000;
+    }
+    #testdiv{
+      background-color:#ffffff;
+      position: absolute;
+      height: 600px;
+      width: 800px;
+      top: 10px;
+      left: 400px;
+    }
+  </style>
+  <style>
+  .videojs-background-wrap {
+    overflow:hidden;
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    z-index: -998;
+  }
+</style>
+
+</head>
+
+<body>
+  <div id="testdiv"> </div>
+  <video
+    id="my-video"
+    class="video-js vjs-theme-city"
+    controls
+    preload="auto"
+    width="1280"
+    height="650"
+    poster="../static/poster.jpg"
+    loop
+  >
+    <source src="../static/video.mp4" type="video/mp4" />
+   
+  </video>
+
+  <script src="https://vjs.zencdn.net/7.8.3/video.js"></script>
+  <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+  <script src="../static/video-background.js"></script>
+<script>
+  videojs('my-video').Background();
+</script>
+</body>
+</html>
