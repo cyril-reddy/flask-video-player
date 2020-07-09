@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>table</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+</head>
+<body>
+<h1><center>LOREAM IPSUM</center></h1>
+<center><table id="abcd" class="display">
+	<thead>
+		<tr>
+		
+			<strong>
+				<td>Userid</td>
+				<td>Id</td>
+				<td>Name</td>
+				<td>Title</td></b>
+			</strong>
+			
+		</tr>
+	</thead>
+	<tbody>
+	{% for values in results %}
+	   <tr>
+	   	<td>{{values.userId}}</td>
+	   	<td>{{values.id}}</td>
+	   	<td>{{values.title}}</td>
+	   	<td>{{values.body}}</td>
+	   </tr>
+	{% endfor %}  
+</tbody>
+</table></center>
+
+
+</body>
+<script>
+$(document).ready( function () {
+    $('#abcd').DataTable();
+} );
+</script>
+</html>
